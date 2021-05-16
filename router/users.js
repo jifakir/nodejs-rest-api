@@ -1,24 +1,14 @@
 const express = require('express');
-
+const userControllers = require('../controllers/user-controller');
 
 const router = express.Router();
 
 
-router.get('/users', (req, res, next) => {
-    res.json('The routing is under development')
-    next();
-});
+router.get('/users', userControllers.getUsers);
 
-router.post('/users', (req, res, next) => {
-    res.json('The routing is under development')
-});
+router.get('/user/:uid', userControllers.getUserById);
 
-router.put('/users', (req, res, next) => {
-    res.json('The routing is under development')
-});
+router.post('/users', userControllers.createUser);
 
-router.delete('/users', (req, res, next) => {   
-    res.json('The routing is under development')
-});
 
 module.exports = router;

@@ -5,22 +5,22 @@ const router = express.Router();
 
 
 router.get('/products', (req, res, next) => {
-    res.json('The routing is under development')
+    res.status(200).json('The routing is under development')
     next();
 });
 
 router.post('/products', (req, res, next) => {
-    res.json('The routing is under development');
+    res.status(200).json('The routing is under development');
     next();
 });
 
 router.put('/products', (req, res, next) => {
-    res.json('The routing is under development');
+    res.status(200).json('The routing is under development');
     next();
 });
 
 router.delete('/products', (req, res, next) => {   
-    res.json('The routing is under development');
+    res.status(200).json('The routing is under development');
     next();
 });
 
