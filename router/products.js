@@ -1,27 +1,11 @@
 const express = require('express');
-
+const productController = require('../controllers/product-controllers');
 
 const router = express.Router();
 
 
-router.get('/products', (req, res, next) => {
-    res.status(200).json('The routing is under development')
-    next();
-});
+router.get('/products', productController.getProducts);
 
-router.post('/products', (req, res, next) => {
-    res.status(200).json('The routing is under development');
-    next();
-});
-
-router.put('/products', (req, res, next) => {
-    res.status(200).json('The routing is under development');
-    next();
-});
-
-router.delete('/products', (req, res, next) => {   
-    res.status(200).json('The routing is under development');
-    next();
-});
+router.post('/products', productController.createProduct);
 
 module.exports = router;
